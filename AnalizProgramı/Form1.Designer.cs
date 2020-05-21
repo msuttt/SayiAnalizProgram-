@@ -43,11 +43,14 @@
             this.rtxt7 = new System.Windows.Forms.RichTextBox();
             this.btndosya = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnArka = new System.Windows.Forms.Button();
+            this.btnOn = new System.Windows.Forms.Button();
+            this.lbldosya = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(505, 24);
+            this.label1.Location = new System.Drawing.Point(93, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 30);
             this.label1.TabIndex = 0;
@@ -56,7 +59,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(639, 24);
+            this.label3.Location = new System.Drawing.Point(227, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 30);
             this.label3.TabIndex = 2;
@@ -67,7 +70,7 @@
             // 
             this.rtxtRakam.BackColor = System.Drawing.Color.White;
             this.rtxtRakam.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rtxtRakam.Location = new System.Drawing.Point(517, 57);
+            this.rtxtRakam.Location = new System.Drawing.Point(105, 60);
             this.rtxtRakam.Name = "rtxtRakam";
             this.rtxtRakam.Size = new System.Drawing.Size(40, 32);
             this.rtxtRakam.TabIndex = 3;
@@ -75,7 +78,7 @@
             // 
             // rtxtSlot
             // 
-            this.rtxtSlot.Location = new System.Drawing.Point(584, 57);
+            this.rtxtSlot.Location = new System.Drawing.Point(172, 60);
             this.rtxtSlot.Name = "rtxtSlot";
             this.rtxtSlot.Size = new System.Drawing.Size(40, 32);
             this.rtxtSlot.TabIndex = 4;
@@ -84,7 +87,7 @@
             // 
             // rtxtAnaliz
             // 
-            this.rtxtAnaliz.Location = new System.Drawing.Point(651, 57);
+            this.rtxtAnaliz.Location = new System.Drawing.Point(239, 60);
             this.rtxtAnaliz.Name = "rtxtAnaliz";
             this.rtxtAnaliz.Size = new System.Drawing.Size(40, 32);
             this.rtxtAnaliz.TabIndex = 5;
@@ -93,7 +96,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(572, 24);
+            this.label2.Location = new System.Drawing.Point(160, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 30);
             this.label2.TabIndex = 6;
@@ -104,7 +107,7 @@
             // 
             this.rtxt1.BackColor = System.Drawing.Color.Gainsboro;
             this.rtxt1.ForeColor = System.Drawing.Color.DarkRed;
-            this.rtxt1.Location = new System.Drawing.Point(43, 116);
+            this.rtxt1.Location = new System.Drawing.Point(95, 111);
             this.rtxt1.Name = "rtxt1";
             this.rtxt1.Size = new System.Drawing.Size(40, 32);
             this.rtxt1.TabIndex = 7;
@@ -115,7 +118,7 @@
             // 
             this.rtxt2.BackColor = System.Drawing.Color.Gainsboro;
             this.rtxt2.ForeColor = System.Drawing.Color.DarkRed;
-            this.rtxt2.Location = new System.Drawing.Point(89, 116);
+            this.rtxt2.Location = new System.Drawing.Point(141, 111);
             this.rtxt2.Name = "rtxt2";
             this.rtxt2.Size = new System.Drawing.Size(40, 32);
             this.rtxt2.TabIndex = 8;
@@ -126,7 +129,7 @@
             // 
             this.rtxt3.BackColor = System.Drawing.Color.Gainsboro;
             this.rtxt3.ForeColor = System.Drawing.Color.DarkRed;
-            this.rtxt3.Location = new System.Drawing.Point(135, 116);
+            this.rtxt3.Location = new System.Drawing.Point(187, 111);
             this.rtxt3.Name = "rtxt3";
             this.rtxt3.Size = new System.Drawing.Size(40, 32);
             this.rtxt3.TabIndex = 9;
@@ -137,7 +140,7 @@
             // 
             this.rtxt4.BackColor = System.Drawing.Color.Gainsboro;
             this.rtxt4.ForeColor = System.Drawing.Color.DarkRed;
-            this.rtxt4.Location = new System.Drawing.Point(181, 116);
+            this.rtxt4.Location = new System.Drawing.Point(233, 111);
             this.rtxt4.Name = "rtxt4";
             this.rtxt4.Size = new System.Drawing.Size(40, 32);
             this.rtxt4.TabIndex = 10;
@@ -148,7 +151,7 @@
             // 
             this.rtxt5.BackColor = System.Drawing.Color.Gainsboro;
             this.rtxt5.ForeColor = System.Drawing.Color.DarkRed;
-            this.rtxt5.Location = new System.Drawing.Point(227, 116);
+            this.rtxt5.Location = new System.Drawing.Point(279, 111);
             this.rtxt5.Name = "rtxt5";
             this.rtxt5.Size = new System.Drawing.Size(40, 32);
             this.rtxt5.TabIndex = 11;
@@ -159,7 +162,7 @@
             // 
             this.rtxt6.BackColor = System.Drawing.Color.Gainsboro;
             this.rtxt6.ForeColor = System.Drawing.Color.DarkRed;
-            this.rtxt6.Location = new System.Drawing.Point(273, 116);
+            this.rtxt6.Location = new System.Drawing.Point(325, 111);
             this.rtxt6.Name = "rtxt6";
             this.rtxt6.Size = new System.Drawing.Size(40, 32);
             this.rtxt6.TabIndex = 12;
@@ -170,7 +173,7 @@
             // 
             this.rtxt7.BackColor = System.Drawing.Color.Gainsboro;
             this.rtxt7.ForeColor = System.Drawing.Color.DarkRed;
-            this.rtxt7.Location = new System.Drawing.Point(319, 116);
+            this.rtxt7.Location = new System.Drawing.Point(371, 111);
             this.rtxt7.Name = "rtxt7";
             this.rtxt7.Size = new System.Drawing.Size(40, 32);
             this.rtxt7.TabIndex = 13;
@@ -179,7 +182,7 @@
             // 
             // btndosya
             // 
-            this.btndosya.Location = new System.Drawing.Point(237, 24);
+            this.btndosya.Location = new System.Drawing.Point(345, 12);
             this.btndosya.Name = "btndosya";
             this.btndosya.Size = new System.Drawing.Size(75, 23);
             this.btndosya.TabIndex = 14;
@@ -192,16 +195,48 @@
             this.listBox1.BackColor = System.Drawing.Color.White;
             this.listBox1.ForeColor = System.Drawing.Color.Black;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(273, 168);
+            this.listBox1.Location = new System.Drawing.Point(121, 173);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(263, 251);
+            this.listBox1.Size = new System.Drawing.Size(299, 264);
             this.listBox1.TabIndex = 15;
+            // 
+            // btnArka
+            // 
+            this.btnArka.Location = new System.Drawing.Point(6, 173);
+            this.btnArka.Name = "btnArka";
+            this.btnArka.Size = new System.Drawing.Size(109, 23);
+            this.btnArka.TabIndex = 16;
+            this.btnArka.Text = "Arkasındaki sayılar";
+            this.btnArka.UseVisualStyleBackColor = true;
+            this.btnArka.Click += new System.EventHandler(this.btnArka_Click);
+            // 
+            // btnOn
+            // 
+            this.btnOn.Location = new System.Drawing.Point(6, 223);
+            this.btnOn.Name = "btnOn";
+            this.btnOn.Size = new System.Drawing.Size(109, 23);
+            this.btnOn.TabIndex = 17;
+            this.btnOn.Text = "Önündeki sayılar";
+            this.btnOn.UseVisualStyleBackColor = true;
+            this.btnOn.Click += new System.EventHandler(this.btnOn_Click);
+            // 
+            // lbldosya
+            // 
+            this.lbldosya.AutoSize = true;
+            this.lbldosya.Location = new System.Drawing.Point(354, 44);
+            this.lbldosya.Name = "lbldosya";
+            this.lbldosya.Size = new System.Drawing.Size(57, 13);
+            this.lbldosya.TabIndex = 18;
+            this.lbldosya.Text = "Dosya yok";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(432, 450);
+            this.Controls.Add(this.lbldosya);
+            this.Controls.Add(this.btnOn);
+            this.Controls.Add(this.btnArka);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btndosya);
             this.Controls.Add(this.rtxt7);
@@ -221,6 +256,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -241,6 +277,9 @@
         private System.Windows.Forms.RichTextBox rtxt7;
         private System.Windows.Forms.Button btndosya;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnArka;
+        private System.Windows.Forms.Button btnOn;
+        private System.Windows.Forms.Label lbldosya;
     }
 }
 

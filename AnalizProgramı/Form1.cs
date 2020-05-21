@@ -15,7 +15,9 @@ namespace AnalizProgramı
     {
         public Form1()
         {
+            
             InitializeComponent();
+          
         }
 
         List<RichTextBox> list = new List<RichTextBox>();
@@ -152,7 +154,7 @@ namespace AnalizProgramı
         }
         public void ArkasındakiniGetir()
         {
-                     
+                    
                 string deger = string.Empty;
                 List<string> txtUzunluk = new List<string>();
 
@@ -240,12 +242,12 @@ namespace AnalizProgramı
 
                             for (int sayi = 0; sayi < analizSayisi; sayi++)
                             {
-                                deger += txtUzunluk[j + i + sayi + 1];
+                                deger += txtUzunluk[j + i + sayi + 1]+",";
 
-                                if (sayi == analizSayisi - 1)
-                                {
-                                    deger += "-";
-                                }
+                                //if (sayi == analizSayisi - 1)
+                                //{
+                                //    deger += "-";
+                                //}
 
                             }
 
@@ -261,9 +263,14 @@ namespace AnalizProgramı
                 string birlestir = string.Empty;
                 for (int birles = 0; birles <= gelen.Length - 1; birles++)
                 {
-                    birlestir += gelen[birles];
+                  if (gelen[birles] != string.Empty)
+                 {
+                    birlestir += gelen[birles] + ",";
+                 }
+                    
                 }
-                listBox1.Items.Add(birlestir + " " + "," + deger);
+
+                listBox1.Items.Add(birlestir + "-" + deger);        
 
                 birlestir = string.Empty;
                 Array.Clear(gelen, 0, 6);
@@ -282,7 +289,7 @@ namespace AnalizProgramı
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+         
             list.Add(rtxt1);
             list.Add(rtxt2);
             list.Add(rtxt3);
@@ -413,7 +420,8 @@ namespace AnalizProgramı
                     {
                         if (list[i].Visible == true && list[i].Text == string.Empty)
                         {
-                            list[i].Text = rakam.ToString();                          
+                            list[i].Text = rakam.ToString();
+                            rtxtRakam.Clear();
                             break;
                         }
                      
@@ -430,13 +438,32 @@ namespace AnalizProgramı
                             }
                         }
 
-                        if (sayac == slotSayi)
+                        if (sayac == slotSayi && slotSayi!=1)
                         {
-                            list[slotSayi - 1].Text = list[slotSayi - 2].Text;
-                            list[slotSayi - 2].Text = list[slotSayi - 3].Text;
-                            list[slotSayi - 3].Text = rakam.ToString();
+                            for(int z = 1; z < slotSayi; z++)
+                            {
+                                
+                                
+                               list[slotSayi - z].Text = list[slotSayi - (z +1)].Text;
+
+                                if (z==slotSayi-1)
+                                {
+                                    list[0].Text = rakam.ToString();
+                                }
+
+
+                            }
+                        
+
+                        }
+
+                        if (sayac == slotSayi && slotSayi == 1)
+                        {
+                            list[0].Text = rakam.ToString();
                         }
                     }
+
+                    rtxtRakam.Clear();
                
                 }
             }

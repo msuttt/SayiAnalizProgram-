@@ -98,26 +98,9 @@ namespace AnalizProgramı
 
         int analizSayisi = 0;
             private void rtxtAnaliz_KeyPress(object sender, KeyPressEventArgs e)
-            {             
-                bool sonuc = true;
-               
-                if (e.KeyChar == (char)Keys.Enter)
-                {
-
-                    sonuc = int.TryParse(rtxtAnaliz.Text,out analizSayisi);
-
-                if (!sonuc)
-                {
-                    MessageBox.Show("Lütfen Sayı Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    rtxtAnaliz.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Analiz sayısı alındı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-               
-              }
-          }
+            {
+      
+        }
 
         private void btnArka_Click(object sender, EventArgs e)
         {
@@ -218,7 +201,13 @@ namespace AnalizProgramı
 
                                 for (int sayi = 0; sayi < analizSayisi; sayi++)
                                 {
-                                    deger += "," + txtUzunluk[j + i + sayi + 1];
+                                    deger += txtUzunluk[j + i + sayi + 1];
+                                       
+                                        if (sayi == analizSayisi - 1)
+                                        {
+                                            deger += "-";
+                                        }
+
                                 }
 
                                 sayac = 0;
@@ -235,11 +224,11 @@ namespace AnalizProgramı
                     {
                         birlestir += gelen[birles];
                     }
-                    listBox1.Items.Add(birlestir + " " + deger);
+                    listBox1.Items.Add(birlestir + " " + ","+deger);
 
                     birlestir = string.Empty;
                     Array.Clear(gelen, 0, 6);
-
+                   
 
                 }
 
@@ -393,6 +382,29 @@ namespace AnalizProgramı
 
            }
        }
+
+        private void rtxtAnaliz_TextChanged(object sender, EventArgs e)
+        {
+            bool sonuc = true;
+            
+                sonuc = int.TryParse(rtxtAnaliz.Text, out analizSayisi);
+
+                if (!sonuc)
+                {
+                    MessageBox.Show("Lütfen Sayı Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    rtxtAnaliz.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Analiz sayısı alındı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            
+        }
+
+       private void rtxtAnaliz_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
     }
 
   }

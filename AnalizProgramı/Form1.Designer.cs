@@ -92,6 +92,8 @@
             this.rtxtAnaliz.Size = new System.Drawing.Size(40, 32);
             this.rtxtAnaliz.TabIndex = 5;
             this.rtxtAnaliz.Text = "";
+            this.rtxtAnaliz.TextChanged += new System.EventHandler(this.rtxtAnaliz_TextChanged);
+            this.rtxtAnaliz.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtxtAnaliz_KeyDown);
             this.rtxtAnaliz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtxtAnaliz_KeyPress);
             // 
             // label2

@@ -42,39 +42,6 @@ namespace AnalizProgramı
         private void rtxtSlot_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-            bool sonuc=true;
-
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                for (int i = 0; i < 7; i++)
-                {
-                    list[i].Visible = false;
-                    list[i].Text = string.Empty;
-                }
-
-               sonuc = int.TryParse(rtxtSlot.Text,out slotSayi);
-
-                if (!sonuc)
-                {
-                    MessageBox.Show("Lütfen sayı giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    rtxtSlot.Clear();
-                }
-               else if (sonuc && slotSayi > 7 || slotSayi < 1)
-                {
-                    MessageBox.Show("Lütfen 1 ile 7 arasında bir sayı giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    rtxtSlot.Clear();
-                }
-                else
-                {
-                    for (int i = 0; i < slotSayi; i++)
-                    {
-                        list[i].Visible = true;
-                    }
-                }
-
-               
-
-            }
 
         }
 

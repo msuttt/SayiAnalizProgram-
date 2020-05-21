@@ -75,6 +75,7 @@
             this.rtxtRakam.Size = new System.Drawing.Size(40, 32);
             this.rtxtRakam.TabIndex = 3;
             this.rtxtRakam.Text = "";
+            this.rtxtRakam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtxtRakam_KeyPress);
             // 
             // rtxtSlot
             // 

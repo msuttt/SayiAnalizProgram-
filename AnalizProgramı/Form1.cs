@@ -400,7 +400,7 @@ namespace AnalizProgramı
                 }
             
         }
-
+        
        private void rtxtAnaliz_KeyDown(object sender, KeyEventArgs e)
         {
             

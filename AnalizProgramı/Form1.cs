@@ -304,7 +304,7 @@ namespace AnalizProgramı
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            chkArka.Checked = true;
+            rdbtnArka.Checked=true;
          
             list.Add(rtxt1);
             list.Add(rtxt2);
@@ -318,8 +318,22 @@ namespace AnalizProgramı
         int slotSayi = 0;
         private void rtxtSlot_KeyPress(object sender, KeyPressEventArgs e)
         {
+            bool dogruMu = true;
+            int outsayi = 0;
             if (e.KeyChar == (char)Keys.Enter)
             {
+
+                dogruMu = int.TryParse(rtxtSlot.Text, out outsayi);
+                if (!dogruMu)
+                {
+
+                }
+
+                else
+                {
+
+               
+
                 for (int i = 0; i < 7; i++)
                 {
                     list[i].Visible = false;
@@ -341,9 +355,11 @@ namespace AnalizProgramı
                     }
                 }
 
-               
 
+                }//
             }
+
+           
 
         }
 
@@ -370,53 +386,31 @@ namespace AnalizProgramı
             private void rtxtAnaliz_KeyPress(object sender, KeyPressEventArgs e)
             {
 
-           // bool sonuc = true;
+            bool dogruMu = true;
+            int  outsayi = 0;
 
             if (e.KeyChar == (char)Keys.Enter)
             {
-                //sonuc = int.TryParse(rtxtAnaliz.Text, out analizSayisi);
 
+                dogruMu = int.TryParse(rtxtSlot.Text, out outsayi);
+                if (!dogruMu)
+                {
+
+                }
+
+                else
+                {
+              
                 analizSayisi = Convert.ToInt32(rtxtAnaliz.Text);
-
-               // if (!sonuc)
-              //  {
-                  //  MessageBox.Show("Lütfen Sayı Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                   
-               // }
-               // else
-               // {
-                //    MessageBox.Show("Analiz sayısı alındı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
+
+                } //
 
             }
 
 
         }
 
-        private void btnArka_Click(object sender, EventArgs e)
-        {
-            if (dosyaYolu == string.Empty)
-            {
-                MessageBox.Show("Lütfen bir dosya seçiniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                ArkasındakiniGetir();
-            }
-            
-        }
-
-        private void btnOn_Click(object sender, EventArgs e)
-        {
-            if (dosyaYolu == string.Empty)
-            {
-                MessageBox.Show("Lütfen bir dosya seçiniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                OnundekiniGetir();
-            }
-        }
 
         private void rtxtAnaliz_TextChanged(object sender, EventArgs e)
         {
@@ -508,13 +502,13 @@ namespace AnalizProgramı
                 }
             }
 
-            if (chkArka.Checked)
+            if (rdbtnArka.Checked)
             {
                    
                ArkasındakiniGetir();                  
                
             }
-            else if (chkOn.Checked)
+            else if (rdbtnOn.Checked)
             {
                 OnundekiniGetir();
             }
@@ -544,6 +538,7 @@ namespace AnalizProgramı
         {
 
         }
+
     }
 
   }

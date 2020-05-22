@@ -43,12 +43,10 @@
             this.rtxt7 = new System.Windows.Forms.RichTextBox();
             this.btndosya = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.btnArka = new System.Windows.Forms.Button();
-            this.btnOn = new System.Windows.Forms.Button();
             this.lbldosya = new System.Windows.Forms.Label();
             this.btnTemizle = new System.Windows.Forms.Button();
-            this.chkArka = new System.Windows.Forms.CheckBox();
-            this.chkOn = new System.Windows.Forms.CheckBox();
+            this.rdbtnArka = new System.Windows.Forms.RadioButton();
+            this.rdbtnOn = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -72,6 +70,7 @@
             // rtxtRakam
             // 
             this.rtxtRakam.BackColor = System.Drawing.Color.White;
+            this.rtxtRakam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxtRakam.ForeColor = System.Drawing.SystemColors.WindowText;
             this.rtxtRakam.Location = new System.Drawing.Point(18, 41);
             this.rtxtRakam.Name = "rtxtRakam";
@@ -83,6 +82,7 @@
             // 
             // rtxtSlot
             // 
+            this.rtxtSlot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxtSlot.Location = new System.Drawing.Point(85, 41);
             this.rtxtSlot.Name = "rtxtSlot";
             this.rtxtSlot.Size = new System.Drawing.Size(40, 32);
@@ -92,6 +92,7 @@
             // 
             // rtxtAnaliz
             // 
+            this.rtxtAnaliz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxtAnaliz.Location = new System.Drawing.Point(152, 41);
             this.rtxtAnaliz.Name = "rtxtAnaliz";
             this.rtxtAnaliz.Size = new System.Drawing.Size(40, 32);
@@ -113,6 +114,7 @@
             // rtxt1
             // 
             this.rtxt1.BackColor = System.Drawing.Color.Gainsboro;
+            this.rtxt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxt1.ForeColor = System.Drawing.Color.DarkRed;
             this.rtxt1.Location = new System.Drawing.Point(11, 85);
             this.rtxt1.Name = "rtxt1";
@@ -124,6 +126,7 @@
             // rtxt2
             // 
             this.rtxt2.BackColor = System.Drawing.Color.Gainsboro;
+            this.rtxt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxt2.ForeColor = System.Drawing.Color.DarkRed;
             this.rtxt2.Location = new System.Drawing.Point(57, 85);
             this.rtxt2.Name = "rtxt2";
@@ -135,6 +138,7 @@
             // rtxt3
             // 
             this.rtxt3.BackColor = System.Drawing.Color.Gainsboro;
+            this.rtxt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxt3.ForeColor = System.Drawing.Color.DarkRed;
             this.rtxt3.Location = new System.Drawing.Point(103, 85);
             this.rtxt3.Name = "rtxt3";
@@ -146,6 +150,7 @@
             // rtxt4
             // 
             this.rtxt4.BackColor = System.Drawing.Color.Gainsboro;
+            this.rtxt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxt4.ForeColor = System.Drawing.Color.DarkRed;
             this.rtxt4.Location = new System.Drawing.Point(149, 85);
             this.rtxt4.Name = "rtxt4";
@@ -157,6 +162,7 @@
             // rtxt5
             // 
             this.rtxt5.BackColor = System.Drawing.Color.Gainsboro;
+            this.rtxt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxt5.ForeColor = System.Drawing.Color.DarkRed;
             this.rtxt5.Location = new System.Drawing.Point(195, 85);
             this.rtxt5.Name = "rtxt5";
@@ -168,6 +174,7 @@
             // rtxt6
             // 
             this.rtxt6.BackColor = System.Drawing.Color.Gainsboro;
+            this.rtxt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxt6.ForeColor = System.Drawing.Color.DarkRed;
             this.rtxt6.Location = new System.Drawing.Point(241, 85);
             this.rtxt6.Name = "rtxt6";
@@ -179,6 +186,7 @@
             // rtxt7
             // 
             this.rtxt7.BackColor = System.Drawing.Color.Gainsboro;
+            this.rtxt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtxt7.ForeColor = System.Drawing.Color.DarkRed;
             this.rtxt7.Location = new System.Drawing.Point(287, 85);
             this.rtxt7.Name = "rtxt7";
@@ -199,38 +207,21 @@
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.Color.White;
-            this.listBox1.ForeColor = System.Drawing.Color.Black;
+            this.listBox1.BackColor = System.Drawing.Color.Black;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 24;
             this.listBox1.Location = new System.Drawing.Point(57, 140);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(299, 290);
+            this.listBox1.Size = new System.Drawing.Size(299, 268);
             this.listBox1.TabIndex = 15;
-            // 
-            // btnArka
-            // 
-            this.btnArka.Location = new System.Drawing.Point(230, 15);
-            this.btnArka.Name = "btnArka";
-            this.btnArka.Size = new System.Drawing.Size(109, 23);
-            this.btnArka.TabIndex = 16;
-            this.btnArka.Text = "Arkasındaki sayılar";
-            this.btnArka.UseVisualStyleBackColor = true;
-            this.btnArka.Click += new System.EventHandler(this.btnArka_Click);
-            // 
-            // btnOn
-            // 
-            this.btnOn.Location = new System.Drawing.Point(230, 50);
-            this.btnOn.Name = "btnOn";
-            this.btnOn.Size = new System.Drawing.Size(109, 23);
-            this.btnOn.TabIndex = 17;
-            this.btnOn.Text = "Önündeki sayılar";
-            this.btnOn.UseVisualStyleBackColor = true;
-            this.btnOn.Click += new System.EventHandler(this.btnOn_Click);
             // 
             // lbldosya
             // 
             this.lbldosya.AutoSize = true;
-            this.lbldosya.Location = new System.Drawing.Point(354, 44);
+            this.lbldosya.ForeColor = System.Drawing.Color.Maroon;
+            this.lbldosya.Location = new System.Drawing.Point(352, 44);
             this.lbldosya.Name = "lbldosya";
             this.lbldosya.Size = new System.Drawing.Size(57, 13);
             this.lbldosya.TabIndex = 18;
@@ -246,37 +237,37 @@
             this.btnTemizle.UseVisualStyleBackColor = true;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
-            // chkArka
+            // rdbtnArka
             // 
-            this.chkArka.AutoSize = true;
-            this.chkArka.Location = new System.Drawing.Point(362, 170);
-            this.chkArka.Name = "chkArka";
-            this.chkArka.Size = new System.Drawing.Size(92, 17);
-            this.chkArka.TabIndex = 20;
-            this.chkArka.Text = "Arkasındakiler";
-            this.chkArka.UseVisualStyleBackColor = true;
+            this.rdbtnArka.AutoSize = true;
+            this.rdbtnArka.Location = new System.Drawing.Point(230, 33);
+            this.rdbtnArka.Name = "rdbtnArka";
+            this.rdbtnArka.Size = new System.Drawing.Size(91, 17);
+            this.rdbtnArka.TabIndex = 22;
+            this.rdbtnArka.TabStop = true;
+            this.rdbtnArka.Text = "Arkasındakiler";
+            this.rdbtnArka.UseVisualStyleBackColor = true;
             // 
-            // chkOn
+            // rdbtnOn
             // 
-            this.chkOn.AutoSize = true;
-            this.chkOn.Location = new System.Drawing.Point(362, 193);
-            this.chkOn.Name = "chkOn";
-            this.chkOn.Size = new System.Drawing.Size(83, 17);
-            this.chkOn.TabIndex = 21;
-            this.chkOn.Text = "Önündekiler";
-            this.chkOn.UseVisualStyleBackColor = true;
+            this.rdbtnOn.AutoSize = true;
+            this.rdbtnOn.Location = new System.Drawing.Point(230, 56);
+            this.rdbtnOn.Name = "rdbtnOn";
+            this.rdbtnOn.Size = new System.Drawing.Size(82, 17);
+            this.rdbtnOn.TabIndex = 23;
+            this.rdbtnOn.TabStop = true;
+            this.rdbtnOn.Text = "Önündekiler";
+            this.rdbtnOn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 460);
-            this.Controls.Add(this.chkOn);
-            this.Controls.Add(this.chkArka);
+            this.ClientSize = new System.Drawing.Size(426, 412);
+            this.Controls.Add(this.rdbtnOn);
+            this.Controls.Add(this.rdbtnArka);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.lbldosya);
-            this.Controls.Add(this.btnOn);
-            this.Controls.Add(this.btnArka);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btndosya);
             this.Controls.Add(this.rtxt7);
@@ -317,12 +308,10 @@
         private System.Windows.Forms.RichTextBox rtxt7;
         private System.Windows.Forms.Button btndosya;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button btnArka;
-        private System.Windows.Forms.Button btnOn;
         private System.Windows.Forms.Label lbldosya;
         private System.Windows.Forms.Button btnTemizle;
-        private System.Windows.Forms.CheckBox chkArka;
-        private System.Windows.Forms.CheckBox chkOn;
+        private System.Windows.Forms.RadioButton rdbtnArka;
+        private System.Windows.Forms.RadioButton rdbtnOn;
     }
 }
 

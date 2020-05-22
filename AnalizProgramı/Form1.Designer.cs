@@ -46,6 +46,9 @@
             this.btnArka = new System.Windows.Forms.Button();
             this.btnOn = new System.Windows.Forms.Button();
             this.lbldosya = new System.Windows.Forms.Label();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.chkArka = new System.Windows.Forms.CheckBox();
+            this.chkOn = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -75,6 +78,7 @@
             this.rtxtRakam.Size = new System.Drawing.Size(40, 32);
             this.rtxtRakam.TabIndex = 3;
             this.rtxtRakam.Text = "";
+            this.rtxtRakam.TextChanged += new System.EventHandler(this.rtxtRakam_TextChanged);
             this.rtxtRakam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtxtRakam_KeyPress);
             // 
             // rtxtSlot
@@ -205,7 +209,7 @@
             // 
             // btnArka
             // 
-            this.btnArka.Location = new System.Drawing.Point(207, 15);
+            this.btnArka.Location = new System.Drawing.Point(230, 15);
             this.btnArka.Name = "btnArka";
             this.btnArka.Size = new System.Drawing.Size(109, 23);
             this.btnArka.TabIndex = 16;
@@ -215,7 +219,7 @@
             // 
             // btnOn
             // 
-            this.btnOn.Location = new System.Drawing.Point(207, 50);
+            this.btnOn.Location = new System.Drawing.Point(230, 50);
             this.btnOn.Name = "btnOn";
             this.btnOn.Size = new System.Drawing.Size(109, 23);
             this.btnOn.TabIndex = 17;
@@ -232,11 +236,44 @@
             this.lbldosya.TabIndex = 18;
             this.lbldosya.Text = "Dosya yok";
             // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Location = new System.Drawing.Point(345, 85);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(75, 23);
+            this.btnTemizle.TabIndex = 19;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
+            // chkArka
+            // 
+            this.chkArka.AutoSize = true;
+            this.chkArka.Location = new System.Drawing.Point(362, 170);
+            this.chkArka.Name = "chkArka";
+            this.chkArka.Size = new System.Drawing.Size(92, 17);
+            this.chkArka.TabIndex = 20;
+            this.chkArka.Text = "Arkasındakiler";
+            this.chkArka.UseVisualStyleBackColor = true;
+            // 
+            // chkOn
+            // 
+            this.chkOn.AutoSize = true;
+            this.chkOn.Location = new System.Drawing.Point(362, 193);
+            this.chkOn.Name = "chkOn";
+            this.chkOn.Size = new System.Drawing.Size(83, 17);
+            this.chkOn.TabIndex = 21;
+            this.chkOn.Text = "Önündekiler";
+            this.chkOn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 450);
+            this.ClientSize = new System.Drawing.Size(445, 460);
+            this.Controls.Add(this.chkOn);
+            this.Controls.Add(this.chkArka);
+            this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.lbldosya);
             this.Controls.Add(this.btnOn);
             this.Controls.Add(this.btnArka);
@@ -283,6 +320,9 @@
         private System.Windows.Forms.Button btnArka;
         private System.Windows.Forms.Button btnOn;
         private System.Windows.Forms.Label lbldosya;
+        private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.CheckBox chkArka;
+        private System.Windows.Forms.CheckBox chkOn;
     }
 }
 

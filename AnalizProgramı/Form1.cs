@@ -118,7 +118,7 @@ namespace AnalizProgramı
                             }
                             else
                             {
-                                deger += txtUzunluk[j + i - sayi - slotSayi] + ",";
+                                deger += txtUzunluk[j + i - sayi - slotSayi] + "-";
                             }
 
                         }
@@ -137,7 +137,7 @@ namespace AnalizProgramı
             {
                 birlestir += gelen[birles];
             }
-            listBox1.Items.Add(deger + " " + birlestir);
+            listBox1.Items.Add(deger);
 
             birlestir = string.Empty;
             Array.Clear(gelen, 0, 6);
@@ -154,7 +154,7 @@ namespace AnalizProgramı
         }
         public void ArkasındakiniGetir()
         {
-                    
+            listBox1.Items.Clear();   
                 string deger = string.Empty;
                 List<string> txtUzunluk = new List<string>();
 
@@ -186,33 +186,36 @@ namespace AnalizProgramı
 
                 }
 
-                //int visibility = 0;
-                //for (int a=0;a<list.Count;a++)
-                //{
-                //    if (list[a].Visible == false)
-                //    {
-                //        visibility++;
-                //    }
-                //}
+            //int visibility = 0;
+            //for (int a=0;a<list.Count;a++)
+            //{
+            //    if (list[a].Visible == false)
+            //    {
+            //        visibility++;
+            //    }
+            //}
 
 
-                //if (visibility == 7)
-                //{
-                //    MessageBox.Show("Hiçbir slot açılmadı","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                //}
+            //if (visibility == 7)
+            //{
+            //    MessageBox.Show("Hiçbir slot açılmadı","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            //}
 
 
-                // else
-                // {
-
-
-
-                // if (slotlarDurumu)
-                // {
+            // else
+            // {
 
 
 
-                StreamReader read = new StreamReader(dosyaYolu, Encoding.GetEncoding("windows-1254"));
+            // if (slotlarDurumu)
+            // {
+
+
+            StreamReader read=null;
+            try
+            {
+                 read = new StreamReader(dosyaYolu, Encoding.GetEncoding("windows-1254"));
+
 
                 string metin = read.ReadLine();
 
@@ -242,7 +245,8 @@ namespace AnalizProgramı
 
                             for (int sayi = 0; sayi < analizSayisi; sayi++)
                             {
-                                deger += txtUzunluk[j + i + sayi + 1]+",";
+
+                                deger += txtUzunluk[j + i + sayi + 1] + "-";
 
                                 //if (sayi == analizSayisi - 1)
                                 //{
@@ -263,17 +267,19 @@ namespace AnalizProgramı
                 string birlestir = string.Empty;
                 for (int birles = 0; birles <= gelen.Length - 1; birles++)
                 {
-                  if (gelen[birles] != string.Empty)
-                 {
-                    birlestir += gelen[birles] + ",";
-                 }
-                    
+                    if (gelen[birles] != string.Empty)
+                    {
+                        birlestir += gelen[birles] + ",";
+                    }
+
                 }
 
-                listBox1.Items.Add(birlestir + "-" + deger);        
+                listBox1.Items.Add(deger);
 
                 birlestir = string.Empty;
                 Array.Clear(gelen, 0, 6);
+
+
 
 
                 //}
@@ -284,11 +290,21 @@ namespace AnalizProgramı
                 //}
 
                 //}
+            }
+            catch (System.ArgumentException)
+            {
+                MessageBox.Show("Dosya seç");
+            }
             
+                
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            chkArka.Checked = true;
          
             list.Add(rtxt1);
             list.Add(rtxt2);
@@ -312,10 +328,20 @@ namespace AnalizProgramı
 
                 slotSayi = Convert.ToInt32(rtxtSlot.Text);
 
-                for (int i = 0; i < slotSayi; i++)
+                if(slotSayi > 7 || slotSayi < 0)
                 {
-                    list[i].Visible = true;
+                    rtxtSlot.Clear();
                 }
+
+                else
+                {
+                    for (int i = 0; i < slotSayi; i++)
+                    {
+                        list[i].Visible = true;
+                    }
+                }
+
+               
 
             }
 
@@ -335,6 +361,7 @@ namespace AnalizProgramı
             {
                 lbldosya.Text = OpenFileDialog.SafeFileName;
                 dosyaYolu = OpenFileDialog.FileName;
+               
             }
 
         }
@@ -404,12 +431,25 @@ namespace AnalizProgramı
         int rakam =0;
         private void rtxtRakam_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            int outsayi = 0;
+            bool dogruMu = true;
+            listBox1.Items.Clear();
 
             if (e.KeyChar == (char)Keys.Enter)
             {
-                rakam = Convert.ToInt32(rtxtRakam.Text);
-                if (rakam > 36)
+                             
+
+                dogruMu = int.TryParse(rtxtRakam.Text,out outsayi);
+                if (!dogruMu)
+                {
+
+                }
+
+                else
+                {
+
+                    rakam = Convert.ToInt32(rtxtRakam.Text);
+                if (rakam > 36 || rakam<0)
                 {
                     rtxtRakam.Clear();
                 }
@@ -467,7 +507,42 @@ namespace AnalizProgramı
                
                 }
             }
-       
+
+            if (chkArka.Checked)
+            {
+                   
+               ArkasındakiniGetir();                  
+               
+            }
+            else if (chkOn.Checked)
+            {
+                OnundekiniGetir();
+            }
+
+             
+
+            }//
+
+          
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            rtxtRakam.Clear();
+            rtxtSlot.Clear();
+            rtxtAnaliz.Clear();
+            listBox1.Items.Clear();
+
+            for(int i = 0; i < list.Count; i++)
+            {
+                list[i].Clear();
+                list[i].Visible = false;
+            }
+        }
+
+        private void rtxtRakam_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
